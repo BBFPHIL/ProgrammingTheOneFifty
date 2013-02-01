@@ -1,0 +1,1 @@
+Attempting to program all of the questions in the book "Cracking the Coding Interview: 150 Programming Questions and Solutions" in 5 days in C++. Anyone can check this code out with my comments explaining what I am doing and the logic behind it. 
