@@ -1,5 +1,10 @@
 #include "Node.h"
 
+//Phillip Walker
+//Basic Single Linked List 
+//Deomnstrate (1) Insert operation and (2) Delete operation
+//
+
 //insert to single linked list
 //@param head: first node
 //@aparam data: data to insert numerically
@@ -68,18 +73,22 @@ void append(Node* head, int data){
 }
 
 //DeleteNode
-//Delete a node from list
+//Objective(s): Delete specific data
+//@param: head of list
+//@param: data to delete
 //
 
 Node* deleteNode(Node* head, int data){
 
   Node* curr = head;
+  Node* tmp;
 
   if(head->getData() == data){
-
-    //set head to next node
+    
+    tmp = head;
     head = curr->getNext();
-    delete curr;
+    curr = head;
+    
     cout << "Deleted Head"<<endl;
 
   }
@@ -98,16 +107,19 @@ Node* deleteNode(Node* head, int data){
 
   }//if
     
+
   return head;
 
 }
 
+//--------------TEST---------------
 
 int main(){
 
   //First node ptr
   Node* head; 
 
+  //Start list at 5
   head = new Node(5);
 
   cout << "Data in node is: " << head->getData() <<endl;
@@ -143,10 +155,8 @@ int main(){
   //Delete the head
   head = deleteNode(head, 4);
 
-  cout << 1<<endl;
-
   cout << "First in list: " << head->getData() <<endl;
-  cout << " 2n: "<< head->getNext()->getData() <<endl;
+  cout << " 2nd: "<< head->getNext()->getData() <<endl;
   cout << " 3rd: " << head->getNext()->getNext()->getData() <<endl;
   
   return 0;
