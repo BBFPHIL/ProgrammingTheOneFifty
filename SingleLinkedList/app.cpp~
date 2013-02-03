@@ -146,8 +146,7 @@ int main(){
   cout << 1<<endl;
 
   cout << "First in list: " << head->getData() <<endl;
-  cout << " 2n: "<< head->getNext()->getData() <<endl;
-  cout << " 3rd: " << head->getNext()->getNext()->getData() <<endl;
+  cout << " 2n: "<< head->getNext()->getData() << " 3rd: " << head->getNext()->getNext()->getData() <<endl;
   
   return 0;
 
