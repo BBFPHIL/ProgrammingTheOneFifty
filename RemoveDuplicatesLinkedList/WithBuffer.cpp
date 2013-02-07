@@ -1,6 +1,7 @@
 //Phillip Walker
 //Objective(s): Create a double linked list with nodes assembling a word
 //Remove duplicate letters from the linked list word
+//Runs in O(n) because it visits each element in the list once... hence linear
 //
 
 #include "Hashtable.h"
