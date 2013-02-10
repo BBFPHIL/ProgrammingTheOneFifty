@@ -7,24 +7,21 @@ Node* BeginCircularList(Node* head){
 
   //find meeting point
   //LOOPSIZE - k steps into list
-  while(fast != NULL && fast->getNext() != NULL){
+  while(fast != NULL && fast->getNext() != NULL){//Go forever or until...
     slow = slow->getNext();
-    cout << slow->getNum()<<endl;
-    
     fast = fast->getNext()->getNext();
-    cout << fast->getNum()<<endl;
-
-    if(slow == fast){//colliding!
+    
+    if(slow == fast){//collision!!
       break;
     }
   }
   
-  //error chekc no meeing point and hence no loop
+  //error check - no circle
   if(fast == NULL || fast->getNext() == NULL){
     return NULL;
   }
 
-  //MOve slow to head, keep fast at meeting point. 
+  //Move slow to head, keep fast at meeting point. 
   //each are k steps from loop start if they move at same pace, 
   //they must meet at loop start!
   slow = head;
@@ -57,14 +54,6 @@ int main(){
 
   //Connect tail to head - now circular
   head->getNext()->getNext()->setNext(head);
-  
-  //Check list
-  /*  curr = head;
-  while(curr != NULL){
-    cout << curr->getNum()<<endl;
-    curr = curr->getNext();
-  }
-  */
 
   Node* loopStart;
   loopStart = BeginCircularList(head);
