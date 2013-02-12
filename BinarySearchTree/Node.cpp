@@ -97,3 +97,97 @@ bool Node::search(int value){
 
 }
 
+//Minimum Value
+//Return the value
+//
+int Node::min(){
+  
+  if(left == NULL){
+    return data;
+  }else{
+    return left->min();
+  }
+
+}
+
+
+//Search 
+//Find and remove node
+//
+
+Node* Node::remove(int value, Node* parent){
+
+  if(value < data){
+    if(left != NULL){
+      return left->remove(value, this);
+    }else{
+      return NULL;
+    }
+  }else if (value > data){
+    if(right != NULL){
+      return right->remove(value, this);
+    }else{
+      return NULL;
+    }
+  }else{
+    if(left != NULL && right != NULL){
+    
+      data = right->min(); // √√
+      return right->remove(this->data, this);
+   
+    }else if (parent->left == this){
+      parent->left = (left != NULL) ? left : right;
+      return this;
+    }else if( parent->right != this){
+      parent->right = (left != NULL) ? left : right;
+      return this;
+    }
+  }
+}
+
+//get data
+//
+
+int Node::getData(){
+
+  return data;
+
+}
+
+//set next left
+//@param newNode: node to add
+//
+
+void Node::setNextLeft(Node* newNode){
+  
+  left = newNode;
+
+}
+
+//set next right
+//@param newNode:: node to add
+//
+
+void Node::setNextRight(Node* newNode){
+  
+  right = newNode;
+
+}
+
+//get Left
+//
+
+Node* Node::getLeft(){
+
+  return left;
+
+}
+
+//get Right
+//
+
+Node* Node::getRight(){
+
+  return right;
+
+}

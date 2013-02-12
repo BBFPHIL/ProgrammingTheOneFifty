@@ -10,7 +10,8 @@ class Node{
  private:
   
   int data; 
-  
+
+  //Node ptrs
   Node* left;
   Node* right;
 
@@ -27,7 +28,28 @@ class Node{
 
   //Search for tree value
   bool search(int);
+
+  //Remove a node
+  Node* remove(int, Node*);
   
+  //return minimum value
+  int min();
+  
+  //Accessors
+  int getData();
+
+  //Set next left
+  void setNextLeft(Node*);
+
+  //Set new right
+  void setNextRight(Node*);
+  
+  //get left
+  Node* getLeft();
+
+  //get right
+  Node* getRight();
+
 
 };
 #endif

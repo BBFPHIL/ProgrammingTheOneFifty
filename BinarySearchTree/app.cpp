@@ -23,6 +23,14 @@ int main(){
     cout << x << " not found!"<<endl;
   }
 
+  cout << "Delete " << x << endl;
+  x = 50;
+  if(treeOne.remove(x)){
+    cout << "Node removed! " <<endl;
+  }else{
+    cout << "Node not removed " << endl;
+  }
+
   return 0;
 
 }

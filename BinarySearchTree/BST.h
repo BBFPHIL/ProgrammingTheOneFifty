@@ -17,7 +17,8 @@ class BST{
   bool add(int);
 
   bool search(int);
-  
+
+  bool remove(int);
 
 };
 #endif
