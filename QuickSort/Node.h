@@ -1,19 +1,23 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <iostream>
-
 using namespace std;
 
+#include <iostream>
+
+//Node class
 class Node{
-
+  
  private:
-
-  //ptr to next
+  
+  //Next ptr
   Node* next;
   
-  //variable
-  int data;
+  //prev ptr
+  Node* prev;
+
+  //Letter
+  int num;
 
  public:
   
@@ -25,17 +29,21 @@ class Node{
 
   //Destructor
   ~Node();
-
-  //set next node
+  
+  //Set next node
   void setNext(Node* newNode);
   
+  //set prev node
+  void setPrev(Node* newNode);
+
   //get next node
   Node* getNext();
+
+  //get prev node
+  Node* getPrev();
   
-  //get data
+  //get letter
   int getNum();
 
-
 };
-
 #endif

@@ -1,11 +1,16 @@
 #include "StackMin.h"
 
+//Default Constructor
+//
 
 StackMin::StackMin(){
   
   stackTwo = new Stack();
 
 }
+
+//Find minimum element
+//
 
 int StackMin::min(){
 
@@ -17,6 +22,9 @@ int StackMin::min(){
 
 }
 
+//Push data top
+//
+
 void StackMin::push(int value){
   
   if(value <= min()){
@@ -25,6 +33,9 @@ void StackMin::push(int value){
   Stack::push(value);
 
 }
+
+//pop off top
+//
 
 int StackMin::pop(){
 
