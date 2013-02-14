@@ -12,7 +12,7 @@ void reverseString(char* str){
 
   char* end = str; // same str but end start
   char tmp;
-
+  
   if(str){ // exists
     
     while(*end){

@@ -33,7 +33,8 @@ int countCompression(string str){
   int count = 1;
   char last = str[0];
   int size = 0;
-  
+
+  //
   for(int i = 0; i<str.length(); i++){
     if(str[i] == last){
       count++;

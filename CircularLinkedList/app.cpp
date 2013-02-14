@@ -47,11 +47,11 @@ int main(){
   //add node
   newNode = new Node(3);
   head->setNext(newNode);
-
+  
   //add node
   newNode = new Node(4);
   head->getNext()->setNext(newNode);
-
+  
   //Connect tail to head - now circular
   head->getNext()->getNext()->setNext(head);
 

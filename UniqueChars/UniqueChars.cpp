@@ -19,10 +19,10 @@ bool isUniqueChars(string str){
 
   //create hash table
   bool *set_char = new bool[256];
-
+  
   //length of str
   for(int i=0; i<str.length(); i++){
-  
+    
     //key
     int val = str[i];
     

@@ -31,11 +31,15 @@ int absTopStack(int stackNum){
 
 void push(int stackNum, int val){
 
+  //check to see if stackptr is larger than stack number
   if(stackPtr[stackNum] +1 >= stackNum){
     cout << "End of Stack ... not possible to push"<<endl;
   }
 
+  //increment stack
   stackPtr[stackNum]++;
+
+  //get very top value from buffer
   buffer[absTopStack(stackNum)] = val;
 
 }
@@ -47,6 +51,7 @@ void push(int stackNum, int val){
 
 int pop(int stackNum){
   
+  //Check if it is empty aka -1
   if(stackNum == -1){
     cout << "Empty Stack"<<endl;
   }
@@ -54,8 +59,9 @@ int pop(int stackNum){
   //save top value
   int value = buffer[absTopStack(stackNum)];
   //Empty top stack loc
-  buffer[absTopStack(stackNum)] = 0; 
+  buffer[absTopStack(stackNum)] = 0;
   stackPtr[stackNum]--;
+  //release stack slot for new values by setting it to zero
 
   return value;
 

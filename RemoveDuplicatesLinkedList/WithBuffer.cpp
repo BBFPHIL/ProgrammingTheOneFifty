@@ -33,9 +33,10 @@ void deleteDups(List* list){
       table->put(key, 2);
                   
     }
-  
+    
     //iterate 
     n = n->getNext();
+  
   }
 }
 

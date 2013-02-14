@@ -33,17 +33,20 @@ HashTable::~HashTable() {
 
 int HashTable::get(int key){
   
-  //int key = k - '0';//convert to special number
-    
+  //make has modulo
   int hash = (key % TABLE_SIZE);
+
+  //Check if occupied but not the right key -> check until right
   while (table[hash] != NULL && table[hash]->getKey() != key){
     hash = (hash + 1 ) % TABLE_SIZE;
   }
   
+  // if empty return -1
   if(table[hash] == NULL){
     return -1;
     
   }else{
+    // return key
     return table[hash]->getValue();
   }
   

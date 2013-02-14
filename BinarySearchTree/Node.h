@@ -23,6 +23,9 @@ class Node{
 
   ~Node();
   
+  //Operations!
+  //
+
   //add value to tree
   bool add(int);
 
@@ -35,7 +38,12 @@ class Node{
   //return minimum value
   int min();
   
-  //Accessors
+  
+
+  
+  //Accessors!!
+  //
+
   int getData();
 
   //Set next left
